@@ -7,7 +7,9 @@
 
     <Directory "/vagrant/webroot/symfony2/web">
         AllowOverride None
-        Allow from All
+        Require all granted
     </Directory>
 
 </VirtualHost>
+
+Include /etc/phpmyadmin/apache.conf

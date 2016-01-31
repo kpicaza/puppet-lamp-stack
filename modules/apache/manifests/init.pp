@@ -1,7 +1,7 @@
 class apache {
 
   # install apache
-  package { "apache2":
+  package { ["apache2", "apache2-utils"]:
     ensure => present,
     require => Exec["apt-get update"]
   }
