@@ -35,7 +35,10 @@ class php::pear {
 
   # clear cache before install phpunit
   exec { "pear clear-cache":
-    require => [Exec["pear channel-discover pear.phpunit.de; true"], Exec["pear channel-discover pear.symfony-project.com; true"], Exec["pear channel-discover components.ez.no; true"]]
+    require => [
+        Exec["pear channel-discover pear.phpunit.de; true"], 
+        Exec["pear channel-discover pear.symfony-project.com; true"], 
+        Exec["pear channel-discover components.ez.no; true"]]
   }
 
   # install phpunit
