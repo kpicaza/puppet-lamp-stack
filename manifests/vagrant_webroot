@@ -1,10 +1,13 @@
 <VirtualHost *:80>
-  ServerName dev.vagrant.com
-  DocumentRoot /vagrant/webroot/symfony2
-  <Directory /vagrant/webroot/symfony2/web>
-    DirectoryIndex app.php app_dev.php index.php index.html
-    AllowOverride All
-    Order allow,deny
-    Allow from all
-  </Directory>
+    ServerName      dev.vagrant.com
+    # ServerAlias     www.mi-sitio.com
+
+    DocumentRoot    "/vagrant/webroot/symfony2/web"
+    DirectoryIndex  app.php
+
+    <Directory "/vagrant/webroot/symfony2/web">
+        AllowOverride None
+        Allow from All
+    </Directory>
+
 </VirtualHost>
