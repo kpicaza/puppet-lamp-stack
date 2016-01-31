@@ -5,7 +5,6 @@ class tools {
     "curl",
     "vim",
     "htop",
-    "wget",
     "git"
   ]
 
