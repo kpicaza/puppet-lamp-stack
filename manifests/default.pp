@@ -11,4 +11,4 @@ include php::pear
 include php::pecl
 include mysql
 include composer
-include symfony2
+include apache::reload
